@@ -1,0 +1,65 @@
+body {
+    font-family: Arial, sans-serif;
+    background: url('/Background/Bc2.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #ffffff;
+}
+
+.my-reservations-container {
+    padding: 20px 30px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    margin-top: 40px;
+}
+
+.reservation-box {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.table {
+    margin: 0;
+    color: #000;
+
+}
+
+    .table th, .table td {
+        background: rgba(255, 255, 255, 0.9);
+        color: #000;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    .table th {
+        font-weight: bold;
+    }
+
+.table-primary {
+    background-color: #4facfe;
+    color: #fff;
+}
+
+.btn-danger {
+    background: linear-gradient(to right, #ff4d4d, #ff6666);
+    border: none;
+}
+
+    .btn-danger:hover {
+        background: linear-gradient(to right, #ff6666, #ff4d4d);
+    }
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .my-reservations-container {
+        padding: 15px;
+    }
+
+    .table {
+        font-size: 14px;
+    }
+}

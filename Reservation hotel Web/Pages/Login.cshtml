@@ -1,0 +1,33 @@
+﻿@page
+@model Reservation_hotel.Pages.LoginModel
+@{
+    ViewData["Title"] = "Login";
+    Layout = null; // Remove layout to disable navigation bar
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Reservation_hotel</title>
+    <link rel="stylesheet" href="~/css/login.css" />
+</head>
+<body class="login-page">
+    <div class="login-container">
+        <div class="login-box">
+            <div class="logo">
+                <img src="Logo/Hotel1.png" alt="Hotel Logo" />
+            </div>
+            <form method="post" id="login-form">
+                <input type="email" id="Email" name="Email" placeholder="Email" value="" required />
+                <input type="password" id="Password" name="Password" placeholder="Password" value="" required />
+                <button type="submit">Login</button>
+            </form>
+            <div class="help-links">
+                Don't have an account? <a asp-page="/Register">Sign Up</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

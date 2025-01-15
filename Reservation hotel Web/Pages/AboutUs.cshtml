@@ -1,0 +1,91 @@
+﻿@page
+@model Reservation_hotel.Pages.AboutUsModel
+@{
+    ViewData["Title"] = "About Us";
+}
+
+<!-- Header Section -->
+<div class="text-center my-4">
+    <h1 class="fw-bold text-primary">About Us</h1>
+    <p class="text-muted">Discover more about our luxurious hotel and services.</p>
+</div>
+
+<!-- Hotel Overview -->
+<div class="container mb-5">
+    <div class="row align-items-center">
+        <!-- Text Content -->
+        <div class="col-md-6">
+            <h2 class="text-primary">Welcome to Our Hotel</h2>
+            <div class="description-box">
+                <p>
+                    Located in the vibrant city of Marrakech, our hotel offers luxurious accommodations and world-class services.
+                    Whether you're visiting for leisure or business, we promise an unforgettable experience with modern amenities,
+                    elegant rooms, and fine dining options.
+                </p>
+                <p>
+                    Experience Moroccan hospitality with our premium services. Established in 2005, we’ve hosted thousands of satisfied guests,
+                    offering comfort, elegance, and unmatched customer service.
+                </p>
+            </div>
+        </div>
+            
+        <!-- Hotel Image -->
+        <div class="col-md-6 text-center">
+            <img src="~/images/hotel-exterior.png" class="img-fluid rounded" alt="Hotel Image">
+        </div>
+    </div>
+</div>
+
+<!-- Facilities Section -->
+<div class="container mb-5">
+    <h2 class="text-center text-primary mb-4">Our Facilities</h2>
+    <div class="row text-center">
+        <!-- Swimming Pool -->
+        <div class="col-md-4">
+            <img src="~/images/swimming-pool.png" class="img-fluid rounded-circle mb-3" alt="Pool Image">
+            <h5>Swimming Pool</h5>
+            <p class="r1">Relax and unwind in our heated indoor pool.</p>
+        </div>
+        <!-- Restaurant -->
+        <div class="col-md-4">
+            <img src="~/images/restaurant-interior.png" class="img-fluid rounded-circle mb-3" alt="Restaurant Image">
+            <h5>Restaurant</h5>
+            <p class="r2">Enjoy fine dining and gourmet dishes in our restaurant.</p>
+        </div>
+        <!-- Spa & Wellness -->
+        <div class="col-md-4">
+            <img src="~/images/spa-wellness.png" class="img-fluid rounded-circle mb-3" alt="Spa Image">
+            <h5>Spa & Wellness</h5>
+            <p class="r3">Rejuvenate yourself with relaxing spa treatments.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Location Section -->
+<div class="container mb-5">
+    <h2 class="text-center text-primary mb-4">Our Location</h2>
+    <div class="row align-items-center">
+        <!-- Text Content -->
+        <div class="loc">
+            <p>
+                Conveniently located in the heart of Marrakech, near famous landmarks such as Jardin Majorelle and Koutoubia Mosque,
+                we provide the perfect base to explore the city's rich culture and vibrant atmosphere.
+            </p>
+            <p>
+                Address: Avenue Mohamed VI, Marrakech, Morocco<br />
+                Contact: +212 524 123456 | Email: info@marrakechhotel.com
+            </p>
+        </div>
+
+        <!-- Google Map Embed -->
+        <div class="loc1">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3329.5885099816724!2d-8.017694523832175!3d31.625825141458244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdafef16b5e3e337%3A0x5efb8d1828a34c65!2sAvenue%20Mohamed%20VI%2C%20Marrakech%2040000%2C%20Morocco!5e0!3m2!1sen!2sus!4v1701782932098!5m2!1sen!2sus"
+                    width="500"
+                    height="300"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy">
+            </iframe>
+        </div>
+    </div>
+</div>

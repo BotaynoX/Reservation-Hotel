@@ -1,0 +1,40 @@
+﻿@page
+@model Reservation_hotel.Pages.RegisterModel
+@{
+    ViewData["Title"] = "Register";
+    Layout = null; // Disable layout to remove navigation bar
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Reservation_hotel</title>
+    <link rel="stylesheet" href="~/css/register.css" />
+</head>
+<body class="register-page">
+    <div class="signup-container">
+        <div class="signup-box">
+            <div class="logo">
+                <img src="Logo/Hotel1.png" alt="Hotel Logo" />
+            </div>
+            <form method="post">
+                <div class="input-group">
+                    <input type="text" id="Nom" name="Nom" placeholder="Nom" value="@Model.Nom" required />
+                    <input type="text" id="Prenom" name="Prenom" placeholder="Prenom" value="@Model.Prenom" required />
+                </div>
+                <input type="text" id="Cin" name="Cin" placeholder="CIN" value="@Model.Cin" required />
+                <input type="tel" id="Telephone" name="Telephone" placeholder="Telephone" value="@Model.Telephone" required />
+                <input type="email" id="Email" name="Email" placeholder="Email" value="@Model.Email" required />
+                <input type="password" id="Password" name="Password" placeholder="Password" value="@Model.Password" required />
+                <button type="submit" class="btn btn-custom">Sign Up</button>
+            </form>
+            <div class="help-links">
+                <p>Already have an account? <a asp-page="/Login">Login</a></p>
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>

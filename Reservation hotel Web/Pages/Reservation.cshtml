@@ -1,0 +1,83 @@
+﻿@page
+@model Reservation_hotel.Pages.ReservationModel
+@{
+    ViewData["Title"] = "Book Your Room";
+    Layout = null; // Remove layout for consistent design
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"] - Reservation_hotel</title>
+    <link rel="stylesheet" href="~/css/reservation.css" />
+</head>
+<body class="reservation-page">
+    <div class="reservation-container">
+        <div class="reservation-box">
+            <div class="logo">
+                <img src="Logo/Hotel1.png" alt="Hotel Logo" />
+            </div>
+            <form method="post">
+                <!-- Room Number -->
+                <div class="form-group">
+                    <label class="form-label"><strong>Room Number:</strong></label>
+                    <input type="text" class="form-control" value="@Model.SelectedRoom.NumeroChambre" readonly />
+                </div>
+
+                <!-- Type -->
+                <div class="form-group">
+                    <label class="form-label"><strong>Type:</strong></label>
+                    <input type="text" class="form-control" value="@Model.SelectedRoom.TypeChambre" readonly />
+                </div>
+
+                <!-- Price -->
+                <div class="form-group">
+                    <label class="form-label"><strong>Price:</strong></label>
+                    <input type="text" class="form-control" id="price" value="@Model.SelectedRoom.Prix" readonly />
+                </div>
+
+                <!-- Reservation Dates -->
+                <div class="form-group">
+                    <label for="DateDebut" class="form-label"><strong>Date Debut:</strong></label>
+                    <input type="date" class="form-control" id="DateDebut" asp-for="DateDebut" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="DateFin" class="form-label"><strong>Date Fin:</strong></label>
+                    <input type="date" class="form-control" id="DateFin" asp-for="DateFin" required  />
+                </div>
+                <button type="submit" class="btn btn-primary">Confirm Reservation</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Calculate the total price based on the number of nights
+        document.getElementById('DateFin').addEventListener('change', function () {
+            const startDate = new Date(document.getElementById('DateDebut').value);
+            const endDate = new Date(this.value);
+            const pricePerNight = @Model.SelectedRoom.Prix;
+
+            if (startDate && endDate && endDate > startDate) {
+                const nights = Math.ceil((endDate - startDate) / (1000 * 60 * 60 * 24));
+                document.getElementById('price').value = (pricePerNight * nights).toFixed(2);
+            } else {
+                document.getElementById('price').value = pricePerNight;
+            }
+        });
+
+        document.getElementById('DateFin').addEventListener('change', function () {
+            const startDate = new Date(document.getElementById('DateDebut').value);
+            const endDate = new Date(this.value);
+
+            if (endDate <= startDate) {
+                alert("Date Fin doit etre apres Date Debut !");
+                this.value = ""; // Clear the invalid date
+            }
+        });
+
+    </script>
+</body>
+</html>

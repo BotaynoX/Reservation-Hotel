@@ -1,0 +1,51 @@
+﻿@page
+@model Reservation_hotel.Pages.MyReservationsModel
+@{
+    ViewData["Title"] = "My Reservations";
+}
+
+<div class="container mt-5">
+    <h1 class="text-center text-primary mb-4">My Reservations</h1>
+
+    @if (!string.IsNullOrEmpty(Model.ErrorMessage))
+    {
+        <div class="alert alert-danger text-center">@Model.ErrorMessage</div>
+    }
+
+    @if (!string.IsNullOrEmpty(Model.SuccessMessage))
+    {
+        <div class="alert alert-success text-center">@Model.SuccessMessage</div>
+    }
+
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped">
+            <thead class="table-primary">
+                <tr>
+                    <th>Room Number</th>
+                    <th>Type</th>
+                    <th>Price</th>
+                    <th>Start Date</th>
+                    <th>End Date</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var reservation in Model.Reservations)
+                {
+                    <tr>
+                        <td>@reservation.RoomNumber</td>
+                        <td>@reservation.Type</td>
+                        <td>$@reservation.Price</td>
+                        <td>@reservation.StartDate.ToString("yyyy-MM-dd")</td>
+                        <td>@reservation.EndDate.ToString("yyyy-MM-dd")</td>
+                        <td class="action-buttons">
+                            <form method="post" asp-page-handler="Cancel" asp-route-reservationId="@reservation.Id">
+                                <button type="submit" class="cancelbt">Cancel</button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,113 @@
+body.reservation-page {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url('/Background/Bc2.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+}
+
+.reservation-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.reservation-box {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px 30px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 400px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+    .logo img {
+        height: 140px;
+    }
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+    form .form-group {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        margin-right:20px;
+    }
+
+    form .form-label {
+        font-weight: bold;
+        margin-bottom: 5px;
+        color: #ffffff;
+    }
+
+    form .form-control {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        background: rgba(255, 255, 255, 0.9);
+        color: #000;
+        outline: none;
+    }
+
+.input-group {
+    display: flex;
+    gap: 15px;
+    justify-content: space-between;
+    padding: 13px;
+}
+
+    .input-group input {
+        flex: 1;
+        padding: 15px;
+        border: none;
+        border-radius: 5px;
+        background: rgba(255, 255, 255, 0.9);
+        color: #000;
+        outline: none;
+    }
+
+button {
+    margin: 10px 0;
+    padding: 10px;
+    background: rgba(76, 175, 80, 0.8);
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+    button:hover {
+        background: rgba(62, 142, 65, 0.9);
+    }
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .input-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

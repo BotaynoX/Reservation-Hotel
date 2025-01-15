@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Reservation_hotel</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/Reservation_hotel.styles.css" asp-append-version="true" />
+    <!-- FontAwesome for Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body class="d-flex flex-column min-vh-100">
+    <!-- Header -->
+    <header>
+        <nav class="custom-navbar">
+            <div class="container d-flex justify-content-between align-items-center">
+                <!-- Brand Name -->
+                <a asp-area="" asp-page="/Index"><img src="Logo/Hotel2.png" alt="Hotel Logo" class="navbar-brand fw-bold" /></a>
+                <!-- Navbar Links -->
+                <ul class="nav-links">
+                    <li>
+                        <a class="nav-link @(ViewData["Title"] == "Home" ? "active" : "")" asp-page="/Index">Home</a>
+                    </li>
+                    <li>
+                        <a class="nav-link @(ViewData["Title"] == "About Us" ? "active" : "")" asp-page="/AboutUs">About Us</a>
+                    </li>
+                    @if (Context.Session.GetInt32("ClientId") != null)
+                    {
+                        <li>
+                            <a class="nav-link @(ViewData["Title"] == "My Reservations" ? "active" : "")" asp-page="/MyReservations">My Reservations</a>
+                        </li>
+                        <li>
+                            <a class="btn btn-logout" asp-page="/Logout">Logout</a>
+                        </li>
+                    }
+                    else
+                    {
+                        <li>
+                            <a class="btn btn-login" asp-page="/Login">Login</a>
+                        </li>
+                    }
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container my-4 flex-grow-1">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div>
+            &copy; 2024 - Reservation_hotel - <a asp-area="" asp-page="/Privacy">Privacy</a>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

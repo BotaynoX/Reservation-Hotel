@@ -1,0 +1,546 @@
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('/Background/Bc2.jpg') no-repeat center center;
+    background-size: cover;
+    filter: blur(5px);
+    z-index: -1;
+}
+
+.custom-navbar {
+    background: url('/Background/Bc2.jpg') no-repeat center center;
+    background-size: cover;
+    backdrop-filter: blur(10px); /* Blur effect for the background image */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    padding: 10px 20px;
+    margin: 20px auto;
+    width: calc(100% - 40px);
+    max-width: 1200px;
+    position: relative;
+    z-index: 10;
+    color: white;
+}
+
+/* Navbar Brand */
+.navbar-brand {
+    height: 150px;
+
+}
+
+/* Navbar Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+    .nav-links li {
+        position: relative;
+    }
+
+.nav-link {
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #ffffff;
+    padding: 10px 15px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+    .nav-link.active,
+    .nav-link:hover {
+        background: rgba(76, 175, 80, 0.8); /* Semi-transparent green */
+        color: #ffffff;
+    }
+
+/* Button Styling */
+.btn-login {
+    background: rgba(76, 175, 80, 0.8);
+    color: #ffffff;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+    .btn-login:hover {
+        background: rgba(62, 142, 65, 0.9);
+    }
+
+.btn-logout {
+    background: rgba(244, 67, 54, 0.8); /* Red background */
+    color: #ffffff; /* White text */
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+    .btn-logout:hover {
+        background: rgba(211, 47, 47, 0.9); /* Darker red on hover */
+        box-shadow: none; /* Stronger shadow on hover */
+    }
+
+button {
+    all: unset;
+    padding: 0;
+    margin:  0;
+}
+
+.btn-logout {
+    background-clip: padding-box; /* Ensure only the red background shows */
+}
+
+
+/* Ensure no conflicting global styles */
+button {
+    all: unset; /* Reset all inherited styles */
+}
+
+
+
+/* Welcome Section */
+.welcome-section {
+    text-align: center;
+    margin: 20px 0;
+}
+
+    .welcome-section h1 {
+        font-weight: bold;
+        color: #34c759; /* Green color */
+    }
+
+    .welcome-section p {
+        color: #6c757d; /* Muted gray for subtext */
+        margin-bottom:50px;
+    }
+
+
+
+/* Center and style the search form */
+form {
+    background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent background */
+    border-radius: 15px; /* Rounded corners */
+    padding: 35px; /* Space inside the form */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow */
+    max-width: 1000px; /* Restrict the width */
+    margin: 20px auto; /* Center the form */
+}
+
+    /* Style the inputs and selects */
+    form .form-control,
+    form .form-select {
+        border-radius: 10px;
+        border: 1px solid #ccc; /* Subtle border */
+        transition: all 0.3s ease-in-out;
+    }
+
+        /* Add hover and focus effects */
+        form .form-control:hover,
+        form .form-select:hover,
+        form .form-control:focus,
+        form .form-select:focus {
+            border-color: #34c759; /* Match the green theme */
+            box-shadow: 0 0 5px #34c759; /* Light green glow */
+            outline: none; /* Remove default focus outline */
+        }
+
+    /* Style the search button */
+    form .btn {
+        background-color: #34c759; /* Green background */
+        color: white; /* White text */
+        border: none; /* No border */
+        padding: 10px 20px; /* Adjust button size */
+        border-radius: 10px; /* Rounded corners */
+        transition: all 0.3s ease-in-out;
+    }
+
+        /* Button hover effect */
+        form .btn:hover {
+            background-color: #28a745; /* Darker green */
+            color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow on hover */
+        }
+
+
+
+/* Card Styles */
+.card {
+    border: 5px solid rgba(0, 0, 0, 0.1); /* Light gray border */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0px 4px 6px rgba(76, 175, 80, 0.8); /* Shadow for depth */
+    overflow: hidden; /* Ensure content stays within the rounded corners */
+    transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
+}
+
+    .card:hover {
+        border: 2px solid #34c759; /* Highlight border on hover with green */
+        box-shadow: 0px 8px 12px rgba(52, 199, 89, 0.8); /* Stronger green shadow on hover */
+    }
+
+/* Card Body Styles */
+.card-body {
+    padding: 20px; /* Add padding inside the card */
+    text-align: center; /* Center-align the content */
+}
+
+
+
+.btn {
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-align: center;
+    transition: all 0.3s ease-in-out; /* Smooth hover effect */
+}
+
+.cancelbt {
+    background-color: #f44336 !important; /* Force red background */
+    color: #ffffff !important; /* Force white text */
+    border: none !important; /* Remove any border */
+    border-radius: 5px !important; /* Add rounded corners */
+    padding: 8px 12px !important; /* Adjust padding */
+    font-weight: bold !important; /* Bold text */
+    font-size: 14px !important; /* Standard text size */
+    cursor: pointer !important; /* Pointer cursor */
+    transition: all 0.3s ease !important; /* Smooth transition for hover effect */
+}
+
+    .cancelbt:hover {
+        background-color: #d32f2f !important; /* Force darker red on hover */
+        box-shadow: 0 4px 8px rgba(244, 67, 54, 0.3) !important; /* Add hover shadow */
+    }
+
+/* Primary Button (Generate PDF) */
+.btn-primary {
+    background-color: #34c759; /* Green */
+    color: #ffffff; /* White text */
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 12px;
+    transition: all 0.3s ease-in-out;
+}
+
+    .btn-primary:hover {
+        background-color: #2aa54c; /* Darker green */
+        box-shadow: 0 4px 8px rgba(52, 199, 89, 0.4);
+        transform: translateY(-2px);
+    }
+
+
+/* Login to Book Button */
+.btn-warning {
+    background-color: #ffc107; /* Yellow background */
+    border: none;
+    color: white;
+    box-shadow: 0 4px 6px rgba(255, 193, 7, 0.8); /* Yellow shadow */
+}
+
+    .btn-warning:hover {
+        background-color: #e0a800; /* Darker yellow on hover */
+        box-shadow: 0 6px 8px rgba(255, 193, 7, 0.9); /* Stronger shadow */
+        transform: translateY(-2px); /* Slight lift effect */
+    }
+
+/* Unavailable Button */
+.btn-secondary {
+    background-color: #adb5bd; /* Gray background */
+    border: none;
+    color: white;
+    cursor: not-allowed; /* Disabled cursor */
+    box-shadow: none;
+}
+
+    .btn-secondary.disabled {
+        opacity: 0.7; /* Reduced opacity for a disabled look */
+    }
+
+
+
+/* Pagination Styles */
+.pagination {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 10px; /* Add some padding */
+    border-radius: 20px;
+    background-color: #34c759; /* Match the green color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+    max-width: fit-content; /* Restrict the width */
+    margin: 100px auto; /* Center the pagination */
+    margin-bottom: 10px;
+    transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
+}
+
+    .pagination:hover {
+        box-shadow: 0 8px 12px rgba(52, 199, 89, 0.8); /* Stronger green shadow on hover */
+    }
+
+    .pagination li {
+        margin: 0 5px;
+    }
+
+    .pagination .page-link {
+        color: #fff; /* White text */
+        background-color: transparent;
+        border: none;
+        padding: 5px 10px; /* Adjust padding to make it smaller */
+        border-radius: 15px;
+        transition: all 0.3s ease;
+        font-size: 0.9rem; /* Smaller text size */
+    }
+
+        .pagination .page-link:hover {
+            background-color: #28a745; /* Darker green on hover */
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+    .pagination .active .page-link {
+        background-color: #ffffff;
+        color: #34c759; /* Green text for active page */
+        font-weight: bold;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Optional shadow for active item */
+    }
+
+    .pagination .disabled .page-link {
+        color: #cccccc;
+        pointer-events: none;
+        background-color: transparent;
+    }
+footer {
+    background-color: #34c759; /* Green color matching the navbar */
+    color: #fff; /* White text for contrast */
+    border-radius: 20px; /* To match the rounded style of the navbar */
+    padding: 15px;
+    margin: 20px auto;
+    width: 95%; /* Center the footer with a consistent width */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
+}
+
+    footer a {
+        color: #ffffff; /* White links */
+        text-decoration: none; /* Remove underline */
+        font-weight: bold;
+        transition: color 0.3s ease;
+    }
+
+        footer a:hover {
+            color: #28a745; /* Slightly darker green for hover */
+        }
+
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .custom-navbar {
+        flex-wrap: wrap;
+        padding: 10px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+}
+
+
+/* General Table Styling */
+.table {
+    width: 100%;
+    border-collapse: collapse; /* Ensure no gaps between borders */
+    margin-top: 20px;
+    background-color: #ffffff; /* Solid background for the table */
+}
+
+    /* Header Styling */
+    .table thead th {
+        background-color: #34c759; /* Green background for header */
+        color: white; /* White text for header */
+        text-align: center; /* Center-align header text */
+        padding: 15px; /* Add consistent padding */
+    }
+
+    /* Body Row Styling */
+    .table tbody tr {
+        background-color: #ffffff; /* Solid white background for all rows */
+        color: #000; /* Black text for rows */
+    }
+
+        .table tbody tr:nth-child(even) {
+            background-color: #f9f9f9; /* Light gray for even rows */
+        }
+
+        .table tbody tr:hover {
+            background-color: #e8f5e9; /* Subtle green for hover */
+        }
+
+    .table tbody td {
+        text-align: center; /* Center-align text */
+        vertical-align: middle; /* Vertically align content */
+        padding: 10px; /* Add consistent padding */
+        border: 1px solid #ddd; /* Light border for cell separation */
+    }
+
+/* Action Button Alignment */
+.action-buttons {
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 10px; /* Add spacing between buttons */
+    justify-content: center;
+    align-items: center;
+}
+
+    .action-buttons button {
+        width: 120px; /* Consistent button width */
+        padding: 5px 10px; /* Adjust button size */
+        font-size: 14px; /* Consistent font size */
+    }
+
+
+/* Update Text Colors */
+.text-primary {
+    color: #34c759 !important; /* Match the green color */
+}
+
+/* Improve Text and Image Alignment */
+.container .row {
+    margin-bottom: 20px; /* Add space between rows */
+}
+
+img {
+    max-width: 100%; /* Ensure images are responsive */
+    height: auto;
+    margin: 0 auto;
+    display: block; /* Center images */
+}
+
+/* Facilities Section */
+.col-md-4 img {
+    margin-bottom: 15px; /* Add space below images */
+}
+
+h5 {
+    font-size: 1.2rem; /* Slightly larger heading for facilities */
+    font-weight: bold;
+    color: #34c759; /* Green color */
+}
+
+p {
+    line-height: 1.6; /* Improve readability */
+    margin-bottom: 15px;
+}
+
+/* Location Section */
+iframe {
+    border-radius: 15px; /* Add rounded corners to the map */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+}
+
+
+.description-box {
+    background-color: rgba(255, 255, 255, 0.8); /* White with slight transparency */
+    padding: 15px 20px; /* Add some space inside the box */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin-bottom: 20px; /* Add space below the description box */
+    line-height: 1.6; /* Improve text readability */
+    color: #000; /* Black text for contrast */
+}
+
+.text-muted {
+    background-color: rgba(255, 255, 255, 0.8); /* White with slight transparency */
+    padding: 15px 15px; /* Add some space inside the box */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin-bottom: 100px; /* Add space below the description box */
+    margin-top:30px;
+    line-height: 1.5; /* Improve text readability */
+    color: #000; /* Black text for contrast */
+    max-width: 500px;
+    text-align: center;
+    margin-left: 450px;
+    margin-right: 450px;
+}
+
+.r1 {
+    background-color: rgba(255, 255, 255, 0.8); /* White with slight transparency */
+    padding: 15px 20px; /* Add some space inside the box */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin-bottom: 20px; /* Add space below the description box */
+    line-height: 1.6; /* Improve text readability */
+    color: #000; /* Black text for contrast */
+}
+
+.r2 {
+    background-color: rgba(255, 255, 255, 0.8); /* White with slight transparency */
+    padding: 15px 20px; /* Add some space inside the box */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin-bottom: 20px; /* Add space below the description box */
+    line-height: 1.6; /* Improve text readability */
+    color: #000; /* Black text for contrast */
+}
+
+.r3 {
+    background-color: rgba(255, 255, 255, 0.8); /* White with slight transparency */
+    padding: 15px 20px; /* Add some space inside the box */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin-bottom: 20px; /* Add space below the description box */
+    line-height: 1.6; /* Improve text readability */
+    color: #000; /* Black text for contrast */
+}
+
+.idx {
+    background-color: rgba(255, 255, 255, 0.8); /* White with slight transparency */
+    padding: 15px 20px; /* Add some space inside the box */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin-bottom: 20px;
+    margin-top: 20px;
+    line-height: 1.6; /* Improve text readability */
+    color: #000; /* Black text for contrast */
+    text-align: center;
+    margin-left: 450px;
+    margin-right: 450px;
+}
+
+
+.loc {
+    background-color: rgba(255, 255, 255, 0.8); /* White with slight transparency */
+    padding: 15px 20px; /* Add some space inside the box */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin-bottom: 20px; /* Add space below the description box */
+    line-height: 1.6; /* Improve text readability */
+    color: #000; /* Black text for contrast */
+    text-align:center;
+}
+
+
+.loc1 {
+    border-radius: 10px; /* Add rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    width: 100%; /* Make the map responsive */
+    max-width: 600px; /* Restrict the maximum width */
+    height: 300px; /* Fixed height for the map */
+    margin-top: 20px; /* Space between text and map */
+    margin-left: 380px;
+    margin-right: 380px;
+}
+

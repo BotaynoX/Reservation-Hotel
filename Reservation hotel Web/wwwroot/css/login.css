@@ -1,0 +1,88 @@
+body.login-page {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url('/Background/Bc2.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.login-box {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px 40px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 400px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+    .logo img {
+        height: 170px;
+    }
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+
+button {
+    margin: 10px 0;
+    padding: 10px;
+    background: rgba(76, 175, 80, 0.8);
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+    button:hover {
+        
+        background: rgba(62, 142, 65, 0.9);
+    }
+
+.help-links {
+    margin-top: 30px;
+    font-size: 12px;
+}
+
+    .help-links a {
+        color: #ffffff;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+
+        .help-links a:hover {
+            color: #d1d1d1;
+        }
